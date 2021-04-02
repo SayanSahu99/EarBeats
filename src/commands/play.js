@@ -65,9 +65,6 @@ async function execute(message, serverQueue, queue) {
       }
   
     } else {
-      // serverQueue.songs.push(song);
-      //console.log(bot.guilds.cache.get(serverQueue.voiceChannel.guild.id).voiceStates.cache.get("821826056973582396"));
-  
   
       if (voiceChannel) {
         // Check if any of the ALREADY EXISTING connections are in that channel, if not connect
@@ -76,14 +73,12 @@ async function execute(message, serverQueue, queue) {
           queueContruct.connection = connection;
           play(message.guild, queueContruct.songs[0]);
           serverQueue.songs.push(song);
-          //return message.channel.send(`${song.title} has been added to the queue!`);
-          return embed(message.channel, { title: "Queued", description: `**${song.title}**`, url: song.url  })
+          return embed(message.channel, { title: "Queued", description: `**${song.title}**`, url: song.url  });
         }
         // else: you're already in the channel
         else {
           serverQueue.songs.push(song);
-          return embed(message.channel, { title: "Queued", description: `**${song.title}**`, url: song.url  })
-          // return message.channel.send(`${song.title} has been added to the queue!`);
+          return embed(message.channel, { title: "Queued", description: `**${song.title}**`, url: song.url  });
         }
       }
     }
@@ -126,5 +121,6 @@ async function execute(message, serverQueue, queue) {
   
 
   module.exports = {
-      play: execute
+    name: 'play', 
+    play: execute
   }
