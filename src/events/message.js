@@ -17,6 +17,11 @@ async function messageEvent(message, command, queue) {
       command.get("stop").stop(message, serverQueue);
       return;
     }
+
+    else if (message.content.startsWith(`${PREFIX}skip`)) {
+      command.get("skip").skip(message, serverQueue);
+      return;
+    }
   
 }
 
