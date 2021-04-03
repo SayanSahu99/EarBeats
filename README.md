@@ -4,12 +4,27 @@
   <img src="https://cdn.discordapp.com/app-icons/821826056973582396/34c47a9e920ec9b0f03886ae07c65293.png"/>
 </p>
 
-# EarBeats
+<div align=center>
+  <h2>EarBeats</h2>
+  <br/>
+
+  <a href="https://github.com/discordjs">
+    <img src="https://img.shields.io/badge/discord.js-v12.5.1-blue.svg?logo=npm" alt="shield.png">
+  </a>
+
+  <a href="https://github.com/SayanSahu99/EarBeats/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="shield.png">
+  </a>
+</div>
+
+
+ # About
+
 > EarBeats is an open source Discord Music Bot built with discord.js. It currently supports YouTube.
 ## Requirements
 
-1. Discord Bot Token **[Guide](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot)**
-2. YouTube Data API **[Guide](https://developers.google.com/youtube/v3/getting-started)**  
+1. Discord Bot Token **[HELP](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot)**
+2. YouTube Data API **[HELP](https://developers.google.com/youtube/v3/getting-started)**  
 3. Node.js v12.18.1 or newer
 
 ## Installation
