@@ -22,6 +22,11 @@ async function messageEvent(message, command, queue) {
       command.get("skip").skip(message, serverQueue);
       return;
     }
+
+    else if (message.content.startsWith(`${PREFIX}clear`)) {
+      command.get("clear").clear(message, serverQueue);
+      return;
+    }
   
 }
 
