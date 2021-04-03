@@ -12,6 +12,11 @@ async function messageEvent(message, command, queue) {
     if (message.content.startsWith(`${PREFIX}play`)) {
       command.get("play").play(message, serverQueue, queue);
     }
+
+    else if (message.content.startsWith(`${PREFIX}stop`)) {
+      command.get("stop").stop(message, serverQueue);
+      return;
+    }
   
 }
 
