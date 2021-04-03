@@ -9,7 +9,12 @@ async function messageEvent(message, command, queue) {
 
   const serverQueue = queue.get(message.guild.id);
 
-  if (message.content.startsWith(`${PREFIX}play`)) {
+  if (message.content.startsWith(`${PREFIX}join`)) {
+    command.get("join").join(message, serverQueue);
+    return;
+  }
+
+  else if (message.content.startsWith(`${PREFIX}play`)) {
     command.get("play").play(message, serverQueue, queue);
   }
 
