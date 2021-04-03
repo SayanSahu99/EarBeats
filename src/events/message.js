@@ -33,6 +33,11 @@ async function messageEvent(message, command, queue) {
     return;
   }
 
+  else if (message.content.startsWith(`${PREFIX}resume`)) {
+    command.get("resume").resume(message, serverQueue);
+    return;
+  }
+
 }
 
 module.exports = {
