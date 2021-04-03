@@ -2,7 +2,7 @@ function clear(message, serverQueue) {
 
     if (!message.member.voice.channel)
         return message.channel.send(
-            "You have to be in a voice channel to stop the music!"
+            "You have to be in a voice channel"
         );
 
     if (!serverQueue)
