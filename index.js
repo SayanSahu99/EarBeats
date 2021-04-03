@@ -1,10 +1,12 @@
 const { readdirSync } = require("fs");
 const { join } = require("path");
-const bot = require("./src/helpers/bot");
 const { Collection } = require("discord.js");
+const keepAlive = require("./server");
+keepAlive();
+const bot = require("./src/helpers/bot");
+
 
 const queue = new Map();
-let queueContruct = {};
 let command, event;
 bot.commands = new Collection();
 bot.events = new Collection();
