@@ -1,4 +1,3 @@
-const play = require("../commands/play");
 const { PREFIX } = require("../util/utils");
 
 async function messageEvent(message, command, queue) {
