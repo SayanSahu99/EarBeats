@@ -1,9 +1,9 @@
 const ytdl = require('ytdl-core');
-const Discord = require('discord.js');
 const YouTube = require("discord-youtube-api");
 const { YOUTUBE_API_KEY } = require("../util/utils");
 const youtube = new YouTube(YOUTUBE_API_KEY);
 const bot = require("../helpers/bot");
+const embed = require('../helpers/embed');
 
 async function execute(message, serverQueue, queue) {
     const args = message.content.split(" ");
@@ -106,20 +106,7 @@ async function execute(message, serverQueue, queue) {
     
     embed(serverQueue.textChannel, { title: "Now Playing", description: `**${song.title}**`, url: song.url })
   }
-
-  function embed(channel, content) {
-    const embed = new Discord.MessageEmbed()
-      // Set the title of the field
-      .setTitle(content.title)
-      // Set the color of the embed
-      .setColor(0xffff00)
-      // Set the main content of the embed
-      .setDescription(`[${content.description}](${content.url})`)
-    // Send the embed to the same channel as the message
-    channel.send(embed);
-  }
   
-
   module.exports = {
     name: 'play', 
     play: execute
