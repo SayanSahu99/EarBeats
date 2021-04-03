@@ -1,6 +1,6 @@
 const { readdirSync } = require("fs");
 const { join } = require("path");
-const bot = require("./src/bot");
+const bot = require("./src/helpers/bot");
 const { Collection } = require("discord.js");
 
 const queue = new Map();
@@ -23,7 +23,9 @@ for(const file of eventFiles) {
   bot.events.set(event.name, event);
 }
 
+/* Events */
 bot.on('message', (message) => bot.events.get("message").messageEvent(message, bot.commands, queue));
+bot.on('ready', () => bot.events.get("ready").readyEvent());
 
 
 process.on('unhandledRejection', err => console.log(err));
