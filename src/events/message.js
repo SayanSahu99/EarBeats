@@ -48,6 +48,11 @@ async function messageEvent(message, command, queue) {
     return;
   }
 
+  else if (message.content.startsWith(`${PREFIX}queue`)) {
+    command.get("queue").queue(message, serverQueue);
+    return;
+  }
+
   else {
     message.channel.send("You need to enter a valid command!");
   }
