@@ -43,6 +43,15 @@ async function messageEvent(message, command, queue) {
     return;
   }
 
+  else if (message.content.startsWith(`${PREFIX}description`)) {
+    command.get("description").description(message, serverQueue);
+    return;
+  }
+
+  else {
+    message.channel.send("You need to enter a valid command!");
+  }
+
 }
 
 module.exports = {
