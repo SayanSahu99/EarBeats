@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const YouTube = require("discord-youtube-api");
 const { YOUTUBE_API_KEY } = require("../util/utils");
 const youtube = new YouTube(YOUTUBE_API_KEY);
-const bot = require("../bot")
+const bot = require("../helpers/bot");
 
 async function execute(message, serverQueue, queue) {
     const args = message.content.split(" ");
